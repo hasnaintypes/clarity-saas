@@ -1,19 +1,23 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Typography } from "@/components/ui/typography"
-import { navLinks } from "@/content/navbar"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Typography } from "@/components/ui/typography";
+import { navLinks } from "@/content/navbar";
 
-export function Navbar() {
+type NavbarProps = {
+  onSearch?: (query: string) => void;
+};
+
+export function Navbar({ onSearch }: NavbarProps) {
   const handleScrollTo = (href: string) => {
     if (href.startsWith("#")) {
-      const element = document.querySelector(href)
+      const element = document.querySelector(href);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" })
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
-  }
+  };
 
   return (
     <nav className="w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -36,8 +40,8 @@ export function Navbar() {
               href={link.href}
               onClick={(e) => {
                 if (link.href.startsWith("#")) {
-                  e.preventDefault()
-                  handleScrollTo(link.href)
+                  e.preventDefault();
+                  handleScrollTo(link.href);
                 }
               }}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
@@ -49,7 +53,12 @@ export function Navbar() {
 
         {/* Right Side Buttons */}
         <div className="flex items-center space-x-3">
-          <Button variant="outline" size="sm" className="rounded-full text-sm px-4 hidden sm:inline-flex" asChild>
+          <Button
+            variant="outline"
+            size="sm"
+            className="rounded-full text-sm px-4 hidden sm:inline-flex"
+            asChild
+          >
             <Link href="/signin">Sign in</Link>
           </Button>
           <Button size="sm" className="rounded-full text-sm px-4" asChild>
@@ -58,5 +67,5 @@ export function Navbar() {
         </div>
       </div>
     </nav>
-  )
+  );
 }

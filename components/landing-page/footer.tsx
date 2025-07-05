@@ -1,12 +1,12 @@
-import Link from "next/link"
-import { Github, Twitter, Linkedin } from "lucide-react"
-import { Typography } from "@/components/ui/typography"
-import { footerContent } from "@/content/footer"
+import Link from "next/link";
+import { Github, Twitter, Linkedin } from "lucide-react";
+import { Typography } from "@/components/ui/typography";
+import { footerContent } from "@/content/footer";
 
 export function Footer() {
   return (
-    <footer className="border-t bg-background">
-      <div className="container px-4 py-12">
+    <footer className="bg-background mt-16 md:mt-24">
+      <div className="container px-4 py-16 md:py-20">
         {/* Desktop Layout */}
         <div className="hidden md:grid md:grid-cols-4 gap-8">
           {/* Logo and Description */}
@@ -15,17 +15,28 @@ export function Footer() {
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-sm">
                 C
               </div>
-              <Typography variant="large">{footerContent.company.name}</Typography>
+              <Typography variant="large">
+                {footerContent.company.name}
+              </Typography>
             </Link>
-            <Typography variant="small" className="text-muted-foreground mb-8 max-w-xs">
+            <Typography
+              variant="small"
+              className="text-muted-foreground mb-8 max-w-xs"
+            >
               {footerContent.company.description}
             </Typography>
             <div className="flex space-x-4 mt-2">
               {footerContent.social.map((social) => (
-                <Link key={social.name} href={social.href} className="text-muted-foreground hover:text-foreground">
+                <Link
+                  key={social.name}
+                  href={social.href}
+                  className="text-muted-foreground hover:text-foreground"
+                >
                   {social.icon === "twitter" && <Twitter className="h-5 w-5" />}
                   {social.icon === "github" && <Github className="h-5 w-5" />}
-                  {social.icon === "linkedin" && <Linkedin className="h-5 w-5" />}
+                  {social.icon === "linkedin" && (
+                    <Linkedin className="h-5 w-5" />
+                  )}
                 </Link>
               ))}
             </div>
@@ -61,17 +72,25 @@ export function Footer() {
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-sm">
                 C
               </div>
-              <Typography variant="large">{footerContent.company.name}</Typography>
+              <Typography variant="large">
+                {footerContent.company.name}
+              </Typography>
             </Link>
             <Typography variant="small" className="text-muted-foreground mb-6">
               {footerContent.company.description}
             </Typography>
             <div className="flex space-x-6 mt-2">
               {footerContent.social.map((social) => (
-                <Link key={social.name} href={social.href} className="text-muted-foreground hover:text-foreground">
+                <Link
+                  key={social.name}
+                  href={social.href}
+                  className="text-muted-foreground hover:text-foreground"
+                >
                   {social.icon === "twitter" && <Twitter className="h-5 w-5" />}
                   {social.icon === "github" && <Github className="h-5 w-5" />}
-                  {social.icon === "linkedin" && <Linkedin className="h-5 w-5" />}
+                  {social.icon === "linkedin" && (
+                    <Linkedin className="h-5 w-5" />
+                  )}
                 </Link>
               ))}
             </div>
@@ -104,11 +123,16 @@ export function Footer() {
         {/* Bottom Section */}
         <div className="mt-12 pt-8 border-t flex flex-col sm:flex-row justify-between items-center">
           <Typography variant="small" className="text-muted-foreground">
-            © {new Date().getFullYear()} {footerContent.company.name}. All rights reserved.
+            © {new Date().getFullYear()} {footerContent.company.name}. All
+            rights reserved.
           </Typography>
           <div className="flex space-x-6 mt-4 sm:mt-0">
             {footerContent.legal.map((link) => (
-              <Link key={link.name} href={link.href} className="text-sm text-muted-foreground hover:text-foreground">
+              <Link
+                key={link.name}
+                href={link.href}
+                className="text-sm text-muted-foreground hover:text-foreground"
+              >
                 {link.name}
               </Link>
             ))}
@@ -116,5 +140,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
