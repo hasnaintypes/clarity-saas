@@ -1,0 +1,85 @@
+import type { FormData, NotificationItem } from "@/types/dashboard"
+
+export const mockForms: FormData[] = [
+  {
+    id: 1,
+    name: "Customer Satisfaction Survey",
+    type: "survey",
+    createdDate: "2024-01-15",
+    feedbackCount: 127,
+    status: "active",
+    description: "Quarterly customer satisfaction measurement",
+  },
+  {
+    id: 2,
+    name: "Product Feedback Form",
+    type: "feedback",
+    createdDate: "2024-01-10",
+    feedbackCount: 89,
+    status: "active",
+    description: "Collect feedback on new product features",
+  },
+  {
+    id: 3,
+    name: "Event Rating",
+    type: "rating",
+    createdDate: "2024-01-08",
+    feedbackCount: 45,
+    status: "draft",
+    description: "Rate our recent webinar experience",
+  },
+  {
+    id: 4,
+    name: "Support Experience",
+    type: "nps",
+    createdDate: "2024-01-05",
+    feedbackCount: 203,
+    status: "active",
+    description: "Net Promoter Score for support team",
+  },
+  {
+    id: 5,
+    name: "Website Usability Test",
+    type: "research",
+    createdDate: "2024-01-03",
+    feedbackCount: 67,
+    status: "active",
+    description: "User experience research for website redesign",
+  },
+  {
+    id: 6,
+    name: "Newsletter Feedback",
+    type: "email",
+    createdDate: "2023-12-28",
+    feedbackCount: 34,
+    status: "paused",
+    description: "Feedback on monthly newsletter content",
+  },
+]
+
+export const mockNotifications: NotificationItem[] = [
+  {
+    id: 1,
+    title: "New Response",
+    message: "Customer Satisfaction Survey received a new response",
+    time: "2 minutes ago",
+    read: false,
+    type: "info",
+  },
+  {
+    id: 2,
+    title: "Form Published",
+    message: "Product Feedback Form has been published successfully",
+    time: "1 hour ago",
+    read: false,
+    type: "success",
+  },
+  {
+    id: 3,
+    title: "Plan Limit Warning",
+    message: "You've used 80% of your monthly response limit",
+    time: "3 hours ago",
+    read: true,
+    type: "warning",
+  },
+]

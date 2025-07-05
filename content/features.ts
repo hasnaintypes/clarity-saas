@@ -11,7 +11,29 @@ export const featuresContent = {
     title: "Intelligent Feedback Processing",
     description:
       "Our AI-powered system automatically filters spam, categorizes feedback by sentiment, and highlights the most actionable insights. Get clean, organized feedback that actually helps improve your product.",
-    preview: ["Real-time feedback processing", "Advanced spam detection", "Sentiment analysis integration"],
+    preview: [
+      "Real-time feedback processing",
+      "Advanced spam detection",
+      "Sentiment analysis integration",
+    ],
+    secondaryFeature: {
+      icon: "globe",
+      badge: "Global Reach",
+      title: "Multi-Language Support",
+      description:
+        "Collect feedback from users worldwide with automatic language detection and translation. Our widgets support 50+ languages and can automatically translate feedback for your team.",
+      features: [
+        {
+          title: "Auto-Translation",
+          description:
+            "Instantly translate feedback to your preferred language",
+        },
+        {
+          title: "Cultural Context",
+          description: "Understanding cultural nuances in feedback",
+        },
+      ],
+    },
   },
   sideFeatures: [
     {
@@ -32,4 +54,4 @@ export const featuresContent = {
       buttonText: "Configure Privacy",
     },
   ],
-}
+};
