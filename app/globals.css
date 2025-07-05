@@ -120,3 +120,22 @@
     @apply bg-background text-foreground;
   }
 }
+
+.container {
+  width: 100%;
+  max-width: 1200px; /* or whatever max width you prefer */
+  margin: 0 auto;
+  padding: 0 1rem; /* 16px on mobile */
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 2rem; /* 32px on tablet and up */
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 3rem; /* 48px on desktop */
+  }
+}
