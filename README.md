@@ -1,56 +1,81 @@
-# Clarity - Feedback Collection SaaS
+# Clarity
 
-A modern SaaS platform for collecting and managing user feedback with intelligent processing and analytics.
+A SaaS platform for collecting, processing, and analyzing user feedback at scale. Clarity combines embeddable feedback widgets, a drag-and-drop form builder, AI-powered processing, and real-time analytics into a single product.
 
-## 🚀 Overview
+## Features
 
-Clarity is a comprehensive feedback collection platform that helps businesses gather meaningful user insights through customizable widgets and forms. Built with Next.js 14 and modern web technologies.
+- **Drag-and-Drop Form Builder** -- Visual editor with conditional logic, multi-step flows, field validation, and real-time preview
+- **Smart Feedback Processing** -- AI-powered spam filtering, sentiment analysis, topic extraction, and auto-categorization
+- **Advanced Analytics** -- Real-time dashboards with NPS tracking, sentiment trends, and exportable reports
+- **Multi-Language Support** -- Automatic language detection and translation for forms and responses
+- **Customizable Templates** -- Pre-built NPS, star rating, CSAT, contact, poll, and feedback templates
+- **Embeddable Widgets** -- Script tag, iframe, and React component embeds with popup, slide-in, and inline modes
+- **Team Collaboration** -- Role-based workspaces, response assignment, internal notes, and tagging
+- **Workflow Automation** -- Trigger-based rules for notifications, assignments, and third-party integrations
+- **API and Webhooks** -- RESTful API with OpenAPI spec and real-time webhook events
+- **White-Label Branding** -- Custom domains, colors, fonts, and removal of Clarity branding
+- **GDPR Compliant** -- Consent management, data retention policies, IP anonymization, and right-to-erasure support
 
-## ✨ Key Features
+## Tech Stack
 
-- **Smart Feedback Processing** - AI-powered spam filtering and sentiment analysis
-- **Multi-Language Support** - Collect feedback globally with auto-translation
-- **Advanced Analytics** - Real-time insights and trend tracking
-- **Customizable Forms** - Multiple form types including NPS, star ratings, and surveys
-- **Easy Integration** - Simple embed codes for any website
-- **GDPR Compliant** - Privacy-first data collection
+| Layer            | Technology                                     |
+| ---------------- | ---------------------------------------------- |
+| Framework        | Next.js 16 (App Router)                        |
+| Language         | TypeScript 5                                   |
+| UI               | React 19, Tailwind CSS 4, shadcn/ui            |
+| Forms            | React Hook Form, Zod 4                         |
+| Charts           | Recharts 3                                     |
+| Icons            | Lucide React                                   |
+| Theming          | next-themes                                    |
 
-## 🛠️ Tech Stack
+## Getting Started
 
-- **Frontend**: Next.js 14, React, TypeScript
-- **Styling**: Tailwind CSS, shadcn/ui components
-- **Icons**: Lucide React
-- **Development**: ESLint, Prettier
+```bash
+git clone https://github.com/hasnaintypes/clarity-saas.git
+cd clarity-saas
+npm install
+npm run dev
+```
 
-## 📱 Form Templates
+Requires Node.js 20+ and npm 10+. The dev server starts at `http://localhost:3000`.
 
-- Star Rating Forms
-- NPS Surveys
-- Contact Forms
-- Quick Polls
-- Product Feedback
-- Event Feedback
-- Support Tickets
+## Project Structure
 
-## 🚧 Development Status
+```
+app/
+  layout.tsx              Root layout with theme provider
+  page.tsx                Landing page
+components/
+  landing-page/           Marketing site sections (navbar, hero, features, pricing, CTA, footer)
+  ui/                     shadcn/ui component library
+  theme-provider.tsx      Light/dark/system theme management
+content/                  Static content data
+hooks/                    Custom React hooks
+lib/                      Utility functions
+types/                    TypeScript type definitions
+```
 
-**This project is currently under active development.**
+## Scripts
 
-Many features are being built and refined. Expect frequent updates and changes as we work towards the first stable release.
+| Command         | Description                       |
+| --------------- | --------------------------------- |
+| `npm run dev`   | Start development server          |
+| `npm run build` | Create optimized production build |
+| `npm start`     | Serve production build            |
+| `npm run lint`  | Run ESLint                        |
 
-## 🎯 Project Vision
+## Environment Variables
 
-Clarity aims to transform how businesses collect and act on customer feedback by providing:
+Create a `.env.local` file in the project root. Required variables will be documented as integrations are implemented.
 
-- Intelligent filtering and categorization
-- Real-time processing and insights
-- Seamless integration with existing workflows
-- Global accessibility with multi-language support
+## Deployment
 
-## 📝 License
+Designed for Vercel (zero-config), but works with any Node.js hosting platform including Docker, AWS, GCP, and Azure.
 
-This project is currently in development and not yet licensed for public use.
+## License
+
+Proprietary. Not licensed for public use, modification, or distribution. All rights reserved.
 
 ---
 
-**Note**: This is a work-in-progress project. Features, documentation, and implementation details are subject to change as development continues.
+This project is under active development. See [FEATURES.md](./FEATURES.md) for the full feature specification.
