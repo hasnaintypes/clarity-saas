@@ -1,5 +1,5 @@
 import { HeroHeader } from "@/components/layout/header";
-import FooterSection from "@/components/layout/footer";
+import ConditionalFooter from "@/components/layout/conditional-footer";
 import ScrollToTop from "@/components/scroll-to-top";
 
 export default function PublicLayout({
@@ -11,7 +11,7 @@ export default function PublicLayout({
     <>
       <HeroHeader />
       <main>{children}</main>
-      <FooterSection />
+      <ConditionalFooter />
       <ScrollToTop />
     </>
   );

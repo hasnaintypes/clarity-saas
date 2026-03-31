@@ -1,0 +1,11 @@
+"use client"
+
+import { usePathname } from "next/navigation"
+import FooterSection from "@/components/layout/footer"
+
+const hideOnRoutes = ["/contact"]
+
+export default function ConditionalFooter() {
+    const pathname = usePathname()
+    return <FooterSection hide={hideOnRoutes.includes(pathname)} />
+}
