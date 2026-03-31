@@ -39,7 +39,9 @@ const links = [
     },
 ]
 
-export default function FooterSection() {
+export default function FooterSection({ hide = false }: { hide?: boolean }) {
+    if (hide) return null
+
     return (
         <footer className="border-t bg-background pt-20">
             <div className="mx-auto max-w-5xl px-6">
