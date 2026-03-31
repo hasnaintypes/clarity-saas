@@ -1,0 +1,8 @@
+export { default as HeroSection } from './hero-section'
+export { default as ContentSection } from './content-section'
+export { default as Features } from './features-section'
+export { default as StatsSection } from './stats-section'
+export { default as Pricing } from './pricing-section'
+export { default as Testimonials } from './testimonials-section'
+export { default as FAQs } from './faq-section'
+export { default as CallToAction } from './cta-section'
