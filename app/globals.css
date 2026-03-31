@@ -124,40 +124,13 @@
   }
 }
 
-/* Custom scrollbar */
+/* Hide scrollbar but keep scroll */
 ::-webkit-scrollbar {
-  width: 6px;
+  display: none;
 }
 
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: hsl(224 0% 64.47%);
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: hsl(224 0% 45.61%);
-}
-
-.dark ::-webkit-scrollbar-thumb {
-  background: hsl(0 0% 19.89%);
-}
-
-.dark ::-webkit-scrollbar-thumb:hover {
-  background: hsl(0 0% 32.31%);
-}
-
-/* Firefox scrollbar */
 * {
-  scrollbar-width: thin;
-  scrollbar-color: hsl(224 0% 64.47%) transparent;
-}
-
-.dark * {
-  scrollbar-color: hsl(0 0% 19.89%) transparent;
+  scrollbar-width: none;
 }
 
 .container {
