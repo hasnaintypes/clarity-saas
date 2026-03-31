@@ -19,26 +19,26 @@ export default function ContactSection() {
                 className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--color-background)_75%)]"
             />
 
-            <section className="relative py-16 md:py-24">
+            <section className="relative pt-28 pb-12 md:pt-36 md:pb-16">
                 <div className="mx-auto max-w-lg px-6">
                     <div className="text-center">
                         <h1 className="text-4xl font-medium lg:text-5xl">
                             Get in touch
                         </h1>
-                        <p className="mt-4 text-muted-foreground">
+                        <p className="mt-3 text-muted-foreground">
                             Have a question or feedback? We&apos;d love to hear from you.
                         </p>
                     </div>
 
-                    <form className="mt-10 space-y-5">
+                    <form className="mt-8 space-y-4">
                         <div className="grid gap-4 sm:grid-cols-2">
-                            <div className="space-y-2">
+                            <div className="space-y-1.5">
                                 <label htmlFor="first-name" className="text-sm font-medium">
                                     First name
                                 </label>
                                 <Input id="first-name" placeholder="John" required />
                             </div>
-                            <div className="space-y-2">
+                            <div className="space-y-1.5">
                                 <label htmlFor="last-name" className="text-sm font-medium">
                                     Last name
                                 </label>
@@ -46,7 +46,7 @@ export default function ContactSection() {
                             </div>
                         </div>
 
-                        <div className="space-y-2">
+                        <div className="space-y-1.5">
                             <label htmlFor="email" className="text-sm font-medium">
                                 Email
                             </label>
@@ -58,7 +58,7 @@ export default function ContactSection() {
                             />
                         </div>
 
-                        <div className="space-y-2">
+                        <div className="space-y-1.5">
                             <label htmlFor="subject" className="text-sm font-medium">
                                 Subject
                             </label>
@@ -69,14 +69,14 @@ export default function ContactSection() {
                             />
                         </div>
 
-                        <div className="space-y-2">
+                        <div className="space-y-1.5">
                             <label htmlFor="message" className="text-sm font-medium">
                                 Message
                             </label>
                             <Textarea
                                 id="message"
                                 placeholder="Tell us more about your question..."
-                                className="min-h-32"
+                                className="min-h-28"
                                 required
                             />
                         </div>
