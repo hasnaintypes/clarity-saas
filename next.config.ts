@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         hostname: "cdn.dribbble.com",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "randomuser.me",
+        port: "",
+      },
     ],
   },
 };
