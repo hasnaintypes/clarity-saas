@@ -1,13 +1,30 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 export default function NotFound() {
   return (
     <div className="flex h-svh flex-col items-center justify-center bg-background px-6 text-center">
-      <p className="text-sm font-medium text-muted-foreground">404</p>
-      <h1 className="mt-2 text-3xl font-bold">Page not found</h1>
+      <Image
+        src="/not-found-light.png"
+        alt="Page not found"
+        width={400}
+        height={300}
+        className="block h-auto w-72 dark:hidden"
+        priority
+      />
+      <Image
+        src="/not-found-dark.png"
+        alt="Page not found"
+        width={400}
+        height={300}
+        className="hidden h-auto w-72 dark:block"
+        priority
+      />
+      <h1 className="mt-6 text-3xl font-bold">Page not found</h1>
       <p className="mt-2 text-muted-foreground">
-        Sorry, the page you&apos;re looking for doesn&apos;t exist or has been moved.
+        Sorry, the page you&apos;re looking for doesn&apos;t exist or has been
+        moved.
       </p>
       <Button asChild className="mt-6">
         <Link href="/">Go back home</Link>
